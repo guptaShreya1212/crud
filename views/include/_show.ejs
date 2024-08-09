@@ -1,0 +1,21 @@
+<% for(var i=0;i<user.length;i++){%>
+<tr>
+    <td><%= user[i].name%></td>
+    <td><%= user[i].email%></td>
+    <td><%= user[i].gender%></td>
+    <td><%= user[i].age%></td>
+    <td><%= user[i].dob.split('T')[0] %></td>
+    <td><%= user[i].contact%></td>
+    <td><%= user[i].qualification%></td>
+    <td>
+        <a href="/update-user?id=<%=user[i]._id%>" class="btn border-shadow update">
+        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+    </a>
+    </td>
+    <td>
+        <a class="btn border-shadow update delete_btn" data-id="<%= user[i]._id %>" >
+        <span class="text-gradient"><i class="fas fa-times"></i></span>
+    </a>
+    </td> 
+</tr>
+<% } %>
